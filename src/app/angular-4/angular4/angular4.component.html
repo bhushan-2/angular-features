@@ -1,0 +1,80 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 pd-0">
+      <div class="angular-4">
+        <label>Angular 4 Features</label>
+        <div>(Released in 2017)</div>
+      </div>
+    </div>
+  </div>
+  <div class="row features-scroll">
+    <div class="col-md-12">
+      <div class="feature">
+        <label>1. Angular Animations</label>
+        <p>
+          Animation provides the illusion of motion: HTML elements change styling over time.
+          Angular's animation system is built on CSS functionality, which means you can animate any property that the
+          browser considers animatable. This includes positions, sizes, transforms, colors, borders, and more.
+          Upgrading the Angular 2 Animations now has their own package i.e. @angular/platform-browser/animations;
+        </p>
+        <div class="terminal">
+          <pre>{{animationCommand}}</pre>
+        </div>
+
+        <div class="animations">
+          <div class="resize">
+            <label>Change the div size</label>
+            <button class="btn btn-primary" (click)="changeSquareState()">Change Size</button>
+            <div [@changeDivSize]=currentState></div>
+            <br />
+          </div>
+
+          <div class="ballon">
+            <label>Balloon Effect</label>
+            <button class="btn btn-primary" (click)="changeBallonState()">Change Size</button>
+            <!-- <br />
+            <br /> -->
+            <br />
+            <br />
+            <div (click)="changeBallonState()" class="ballon-dot" [@balloonEffect]=currentStateBallon>
+            </div>
+          </div>
+
+          <div class="fadeIn">
+            <label>Fade-In and Fade-Out animation</label>
+            <br />
+            <div class="btn-parent">
+              <button class="btn btn-primary" (click)="addItem()">Add item</button>
+              <button class="btn btn-primary" (click)="removeItem()">Remove item</button>
+            </div>
+            <div class="animation-box">
+              <ul>
+                <li *ngFor="let list of listItem" [@fadeInOut]>
+                  {{list}}
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="enter-leave">
+            <label>Enter and Leave animation</label>
+            <br />
+            <div class="btn-parent">
+              <button class="btn btn-primary" (click)="addRecord()">Add item</button>
+              <button class="btn btn-primary" (click)="removeRecord()">Remove item</button>
+            </div>
+
+            <div class="animation-box">
+              <ul>
+                <li *ngFor="let list of listRecord" [@EnterLeave]="'flyIn'">
+                  {{list}}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

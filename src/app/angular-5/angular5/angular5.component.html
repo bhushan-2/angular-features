@@ -1,0 +1,51 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 pd-0">
+      <div class="angular-5">
+        <label>Angular 5 Features</label>
+        <div>(Released on Nov 2017)</div>
+      </div>
+    </div>
+  </div>
+  <div class="row features-scroll">
+    <div class="col-md-12">
+      <div class="feature">
+        <label>1. HttpClient</label>
+        <p>
+          The HttpClient was first introduced in 4.3 version and now the Angular team has made some improvements to this
+          update with Angular 5.0. From this new version, developers are recommending HttpClient for all applications,
+          and stop using the precious @angular/http library.
+        </p>
+        <p>To use the updated HttpClient, you should replace the HttpModule with HttpClientModule from
+          @angular/common/http, inject the HttpClient service, and remove the map(res => rex.json()) calls that is no
+          longer required.</p>
+        <div class="terminal">
+          <pre>{{httpCommand}}</pre>
+        </div>
+      </div>
+      <div class="feature">
+        <label>2. Internationalized Number, Date, and Currency Pipes</label>
+        <p>
+          Angular 5 ships with new number, date, and currency pipes that increase standardization across browsers and
+          eliminate the need for i18n polyfills. The pipes rely on the CLDR to provide extensive locale support and
+          configurations for any locales you want to support. To use the old pipes, you will have to import the
+          DeprecatedI18NPipesModule after the CommonModule.
+        </p>
+        <div class="terminal">
+          <pre>{{datePipe}}</pre>
+          <pre>The current date & time is: {{currentDate | date:'medium'}}</pre>
+        </div>
+      </div>
+      <div class="feature">
+        <label>3. Support for Multiple Export Alias in Angular 5</label>
+        <p>
+          In Angular 5, you can now give multiple names to your components and directives while exporting. Exporting a
+          component with multiple names can help your users migrate without breaking changes.
+        </p>
+        <div class="terminal">
+          <pre>{{exportAs}}</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

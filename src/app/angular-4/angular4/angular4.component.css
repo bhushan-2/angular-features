@@ -1,0 +1,113 @@
+.angular-4 {
+    width: 100%;
+    padding: 10px;
+    background: rgb(241, 241, 241);
+}
+
+.angular-4 label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1976d2;
+    margin-left: 20px;
+}
+
+.angular-4 div {
+    font-size: 12px;
+    font-weight: 400;
+    color: #ccc;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.feature {
+    margin: 10px 10px 20px 10px;
+    background: white;
+}
+
+.feature label {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.feature p {
+    font-size: 13px;
+}
+
+.feature div {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.features-scroll {
+    height: calc(100vh - 54px);
+    overflow: auto;
+}
+
+.feature-video {
+    margin: 15px;
+}
+
+.animations {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.animations > div {
+    width: 550px;
+    height: 300px;
+    border: 1px solid #ccc;
+    margin: 10px 10px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.ballon-dot {
+    width:100px;
+    height:100px;
+    border-radius: 100%; 
+    margin: 3rem;
+    background-color: #1678df;
+}
+
+.resize label,
+.ballon label,
+.fadeIn label,
+.enter-leave label {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 5px;
+}
+
+.resize button,
+.ballon button{
+    display: block;
+    margin: 10px;
+    font-size: 12px;
+}
+
+.fadeIn button,
+.enter-leave button{
+    display: inline-block;
+    margin: 10px;
+    font-size: 12px;
+}
+
+.resize div,
+.ballon div,
+.fadeIn div,
+.enter-leave div {
+    margin: auto;
+}
+
+.btn-parent {
+    margin: 5px 5px;
+}
+
+.animation-box {
+    width:200px;
+    margin-left: 20px
+}
+
+.animation-box li {
+    font-size: 12px;
+}

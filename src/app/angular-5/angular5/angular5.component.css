@@ -1,0 +1,43 @@
+.angular-5 {
+    width: 100%;
+    padding: 10px;
+    background: rgb(241, 241, 241);
+}
+
+.angular-5 label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1976d2;
+    margin-left: 20px;
+}
+
+.angular-5 div {
+    font-size: 12px;
+    font-weight: 400;
+    color: #ccc;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.feature {
+    margin: 10px 10px 20px 10px;
+}
+
+.feature label {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.feature p {
+    font-size: 13px;
+}
+
+.feature div {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.features-scroll {
+    height: calc(100vh - 54px);
+    overflow: auto;
+}

@@ -1,0 +1,44 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 pd-0">
+      <div class="angular-6">
+        <label>Angular 6 Features</label>
+        <div>(Released on April 2018)</div>
+      </div>
+    </div>
+  </div>
+  <div class="row features-scroll">
+    <div class="col-md-12">
+      <div class="feature">
+        <label>1. ElementRef</label>
+        <p>
+          In previous versions of Angular, when we want to create the reference of an element in the template, we can
+          use @ViewChild or @ViewChildren or inject the host using ElementRef directly. But, the problem is that
+          ElementRef had its nativeElement property typed like any other element. But now in Angular 6, we can use type
+          ElementRef more strictly if we want.
+        </p>
+        <div class="terminal">
+          <pre>{{elementRef}}</pre>
+        </div>
+      </div>
+      <div class="feature">
+        <label>2. New method of registering a service</label>
+        <p>
+            There is a new way to define an injectable service in Angular 6. With this new way, we can register a provider directly inside the @Injectable() decorator, using the new providedIn attribute. It accepts ‘root’ as a value or any module name from our application. When we use ‘root,’ it means this injectable will be registered as a singleton object in the application and we don’t need to add it to the providers of the root modules.
+        </p>
+        <div class="terminal">
+          <pre>{{service}}</pre>
+        </div>
+      </div>
+      <div class="feature">
+        <label>3. RxJS 6.0</label>
+        <p>
+            Angular 6 now used RxJS 6 internally. So we need to update our application accordingly. These changes provide developers an increase in performance and are easier to debug AJAX call stacks and improve modularity also, making it as backward compatible as possible. But RxJS changed the way we import things.
+        </p>
+        <div class="terminal">
+          <pre>{{rxjs}}</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
