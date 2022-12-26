@@ -4,59 +4,79 @@
       <div class="angular-11">
         <label>Angular 11 Features</label>
         <div>(Released on Nov 2020)</div>
-        <div class="back" [routerLink]="['/']">
-          < Back</div> </div> </div> </div> <div class="row features-scroll">
-            <div class="col-md-12">
-              <div class="feature">
-                <label>1. Automatic Inlining of Fonts</label>
-                <p>
-                  To make your apps even faster by speeding up their first contentful paint, we’re introducing automatic
-                  font inlining. During compile time Angular CLI will download and inline fonts that are being used and
-                  linked in the application. These new features of Angular 11 are enabled by default for production
-                  configuration.
-                </p>
-                <p><b>You can disable this optimisation by changing the flag to below snippets</b></p>
-                <div class="terminal">
-                  <pre>{{fontOptimization}}</pre>
-                </div>
-              </div>
-              <div class="feature">
-                <label>2. Hot Module Replacement (HMR) Support</label>
-                <p>
-                  Hot Module Replacement is a mechanism that allows the modules to be replaced without a full browser
-                  refresh.
-                </p>
-                <p>Now during development the latest changes to components, templates and styles will be instantly
-                  updated into the running application. All without requiring a full page refresh. Data typed into forms
-                  are preserved as well as scroll position providing a boost to developer productivity.</p>
-                <div class="terminal">
-                  <pre>{{hmr}}</pre>
-                </div>
-              </div>
-              <div class="feature">
-                <label>3. Improved Reporting and Logging</label>
-                <p>
-                  Angular has made changes to the builder phase reporting to make it even more helpful during
-                  development. We are bringing in new CLI output updates to make logs and reports easier to read.
-                </p>
-                <div>
-                  <img class="better-report" src="./assets/better_reports.jpg" alt="report">
-                </div>
-              </div>
-              <div class="feature">
-                <label>4. Experimental Webpack 5 Support</label>
-                <p>
-                  Angular 11 improvements involve a team that can opt-in to webpack v5. A webpack is used to incorporate
-                  countless documents into a single bundle or single record. Webpack version 5 is the latest version
-                  that was released a couple of months back. It still needs time to be stable. At the moment, one can
-                  experiment with module federation. This webpack v5 in the future will clear the path for:
-                </p>
-                <p>1. Faster builds and disk caching</p>
-                <p>2. Smaller bundles with cjs tree-shaking</p>
-                <div class="terminal">
-                  <pre>{{webpack}}</pre>
-                </div>
-              </div>
-            </div>
+        <div class="back" [routerLink]="['/']">< Back</div>
+      </div>
+    </div>
+  </div>
+  <div class="row features-scroll">
+    <div class="col-md-12">
+      <div class="feature">
+        <label>1. Automatic Inlining of Fonts</label>
+        <p>
+          To make your apps even faster by speeding up their first contentful
+          paint, we’re introducing automatic font inlining. During compile time
+          Angular CLI will download and inline fonts that are being used and
+          linked in the application. These new features of Angular 11 are
+          enabled by default for production configuration.
+        </p>
+        <p>
+          <b
+            >You can disable this optimisation by changing the flag to below
+            snippets</b
+          >
+        </p>
+        <div class="terminal">
+          <pre>{{ fontOptimization }}</pre>
         </div>
       </div>
+      <div class="feature">
+        <label>2. Hot Module Replacement (HMR) Support</label>
+        <p>
+          Hot Module Replacement is a mechanism that allows the modules to be
+          replaced without a full browser refresh.
+        </p>
+        <p>
+          Now during development the latest changes to components, templates and
+          styles will be instantly updated into the running application. All
+          without requiring a full page refresh. Data typed into forms are
+          preserved as well as scroll position providing a boost to developer
+          productivity.
+        </p>
+        <div class="terminal">
+          <pre>{{ hmr }}</pre>
+        </div>
+      </div>
+      <div class="feature">
+        <label>3. Improved Reporting and Logging</label>
+        <p>
+          Angular has made changes to the builder phase reporting to make it
+          even more helpful during development. We are bringing in new CLI
+          output updates to make logs and reports easier to read.
+        </p>
+        <div>
+          <img
+            class="better-report"
+            src="https://github.com/bhushan-2/angular-features/blob/master/src/assets/better_reports.jpg"
+            alt="report"
+          />
+        </div>
+      </div>
+      <div class="feature">
+        <label>4. Experimental Webpack 5 Support</label>
+        <p>
+          Angular 11 improvements involve a team that can opt-in to webpack v5.
+          A webpack is used to incorporate countless documents into a single
+          bundle or single record. Webpack version 5 is the latest version that
+          was released a couple of months back. It still needs time to be
+          stable. At the moment, one can experiment with module federation. This
+          webpack v5 in the future will clear the path for:
+        </p>
+        <p>1. Faster builds and disk caching</p>
+        <p>2. Smaller bundles with cjs tree-shaking</p>
+        <div class="terminal">
+          <pre>{{ webpack }}</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
