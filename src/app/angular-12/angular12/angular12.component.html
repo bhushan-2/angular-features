@@ -1,0 +1,59 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 pd-0">
+      <div class="angular-12">
+        <label>Angular 12 Features</label>
+        <div>(Released on May 2021)</div>
+        <div class="back" [routerLink]="['/']">
+          < Back</div> </div> </div> </div> <div class="row features-scroll">
+            <div class="col-md-12">
+              <div class="feature">
+                <label>1. Nullish Coalescing</label>
+                <p>
+                  The nullish coalescing operator (??) has been assisting engineers with composing cleaner code in
+                  TypeScript classes for some time now. One of the main highlights of this feature is that you can bring
+                  the force of nullish coalescing to Angular templates in v12!
+                </p>
+                <p>Presently, in templates, engineers can utilize the new syntax structure to improve the complex
+                  conditionals. For instance:</p>
+                <div class="terminal">
+                  <pre>{{nullishCoalescing}}</pre>
+                </div>
+              </div>
+              <div class="feature">
+                <label>2. HTTP improvements</label>
+                <p>
+                  Angular 12 features its own list of intelligible names for HTTP status codes, in the form of a const
+                  enum. Because of this new element, we can now utilize HttpStatusCode instead of introducing our own
+                  solution to have human-readable names.
+                </p>
+                <p>Presently, in templates, engineers can utilize the new syntax structure to improve the complex
+                  conditionals.</p>
+                <div class="terminal">
+                  <pre>{{httpStatus}}</pre>
+                </div>
+              </div>
+              <div class="feature">
+                <label>3. Styling improvements</label>
+                <p>
+                  Starting in v12, Angular components will now support inline Sass in the styles field of the @Component
+                  decorator. Previously, Sass was only available in external resources due to the Angular compiler. To
+                  enable this feature in your existing applications add "inlineStyleLanguage": "scss” to angular.json.
+                  Otherwise, it will be available to new projects using SCSS.
+                </p>
+                <p>Additionally, Angular Material and Angular CDK have internally adopted a new Sass module framework.
+                  Finally, angular 12 now also supports Tailwind CSS.
+                </p>
+                <p>Before</p>
+                <div class="terminal">
+                  <pre>{{cssBefore}}</pre>
+                </div>
+                <br>
+                <p>After</p>
+                <div class="terminal">
+                  <pre>{{cssAfter}}</pre>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>

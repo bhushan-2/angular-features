@@ -1,0 +1,65 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 pd-0">
+      <div class="angular-10">
+        <label>Angular 8 Features</label>
+        <div>(Released on June 2020)</div>
+        <div class="back" [routerLink]="['/']">
+          < Back</div> </div> </div> </div> <div class="row features-scroll">
+            <div class="col-md-12">
+              <div class="feature">
+                <label>1. New Date Range Picker</label>
+                <p>
+                  Angular 10 has come with the all-new date range picker. To use it, you can utilize elements of both
+                  mat date range picker and mat date range input.
+                  If you want your users to select a range of dates, instead of a single date, you can use the
+                  mat-date-range-input and mat-date-range-picker components. They work in tandem, similarly to the
+                  mat-datepicker and the basic datepicker input.
+                </p>
+                <div>
+                  <mat-form-field appearance="fill">
+                    <mat-label>Enter a date range</mat-label>
+                    <mat-date-range-input [rangePicker]="picker">
+                      <input matStartDate placeholder="Start date">
+                      <input matEndDate placeholder="End date">
+                    </mat-date-range-input>
+                    <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-date-range-picker #picker></mat-date-range-picker>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="feature">
+                <label>2. Optional Stricter Settings</label>
+                <p>
+                  Angular version 10 offers a more strict project setup in order to create a new workspace with ng new.
+                </p>
+                <p>Once this flag is enabled, it initializes the new project with a couple of new settings that improve
+                  maintainability, assist in catching bugs well ahead in time, and permit the CLI to perform advanced
+                  optimizations on your app. Enabling this flag configures the app as side-effect free to ensure more
+                  advanced tree-shaking.</p>
+                <div class="terminal">
+                  <pre>{{stictCommand}}</pre>
+                </div>
+              </div>
+              <div class="feature">
+                <label>3. Generic with ModuleWithProviders</label>
+                <p>
+                  The utilization of generic keywords has become compulsory with the ModuleWithProviders in Angular 10.
+                  This has been added for making the ModuleWithProviders patterns function with the rendering sequence
+                  and Ivy compiling.
+                </p>
+                <p>Before</p>
+                <div class="terminal">
+                  <pre>{{beforeModule}}</pre>
+                </div>
+                <br>
+                <p>After</p>
+                <div class="terminal">
+                  <pre>{{afterModule}}</pre>
+                </div>
+              </div>
+
+            </div>
+        </div>
+      </div>

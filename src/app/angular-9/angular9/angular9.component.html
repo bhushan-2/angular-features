@@ -1,0 +1,79 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 pd-0">
+      <div class="angular-9">
+        <label>Angular 9 Features</label>
+        <div>(Released on Feb 2020)</div>
+        <div class="back" [routerLink]="['/']">
+          < Back</div> </div> </div> </div> <div class="row features-scroll">
+            <div class="col-md-12">
+              <div class="feature">
+                <label>1. Ivy</label>
+                <p>
+                  With Angular 9, Ivy is the standard renderer. If a renderer is more efficient or easier to implement,
+                  that means you can ship less code because fewer instructions are required, and that’s the purpose of
+                  Ivy.Ivy doesn’t change the way Angular is used, but it does change how the app is generated.
+                </p>
+                <p>
+                  Ivy yields much smaller JavaScript bundles, so Ivy solves Angular’s bundle weaknesses. Ivy will be a
+                  game-changer because it brings Angular applications to a whole new level in terms of performance and
+                  size.
+                </p>
+
+                <p>The key idea behind Incremental DOM is every component gets compiled into a series of instructions.
+                  These instructions create DOM trees and update them in-place when the data changes.</p>
+                <div class="terminal">
+                  <pre>{{ivyStr}}</pre>
+                </div>
+                <p>Will be compiled into:</p>
+                <div class="terminal">
+                  <pre>{{compiledStr}}</pre>
+                </div>
+                <br>
+                <p>The template function contains the instructions rendering and updating the DOM as they are rendering
+                  engine.</p>
+
+                <h6>Two main concepts of IVY</h6>
+                <div>1. <b>Tree shakable</b></div>
+                <div>It means removing unused pieces of your code, the framework does not interpret the component.
+                  Instead, the component references instructions. If it doesn’t reference a particular instruction,
+                  which will never be used so we can omit the unused instruction from the bundle results in smaller
+                  bundles and faster load times.</div>
+                <br>
+                <div><img class="tree-shaking" src="./assets/tree-shaking.jpg"></div>
+                <br>
+                <div>1. <b>Low Memory Footprint</b></div>
+                <div> Incremental DOM doesn’t need any memory to rerender the view if it doesn’t change the DOM so it
+                  allocates the memory when the DOM nodes are added or removed. since most of render/template calls
+                  don’t change anything result in huge memory savings.</div>
+                <br>
+                <div><img class="tree-shaking" src="./assets/memory-footprint.jpg"></div>
+              </div>
+              <div class="feature">
+                <label>2. Improved CSS class and style binding</label>
+                <p>
+                  The Ivy compiler and runtime provides improvements for handling styles. Previously, if an application
+                  contained competing definitions for a style, those styles would destructively replace each other. With
+                  Ivy, the styles are merged in a predictable way.
+                  <br>
+                  Consider the following template and component snippets:
+
+                </p>
+                <div class="terminal">
+                  <pre>{{cssSnippet}}</pre>
+                </div>
+                <br>
+                <p>
+                  With version 9, you can manage your styles through a clear, consistent order of precedence that isn’t
+                  dependent on timing. The most specific styles always have the highest precedence. For example, a
+                  binding to [style.color] overrides a conflicting binding to [style].
+                </p>
+                <br>
+                <p>you can now also bind to CSS custom properties (also known as CSS variables).</p>
+                <div class="terminal">
+                    <pre>{{customCSSSnippet}}</pre>
+                  </div>
+              </div>
+            </div>
+        </div>
+      </div>

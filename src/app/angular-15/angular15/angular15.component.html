@@ -1,0 +1,90 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 pd-0">
+      <div class="angular-15">
+        <label>Angular 15 Features</label>
+        <div>(Released on Nov 2022)</div>
+        <div class="back" [routerLink]="['/']">
+          < Back</div> </div> </div> </div> <div class="row features-scroll">
+            <div class="col-md-12">
+              <div class="feature">
+                <label>1. Stable Standalone Components</label>
+                <p>
+                  Angular Team introduced the Standalone API with Angular 14, allowing developers to build applications
+                  without using Ng Modules. Now in Angular 15, it has graduated from the Developer preview and has
+                  become stable.
+                </p>
+                <p>
+                  The Angular Team ensured that the standalone APIs were ready to graduate and that the standalone
+                  components worked across Angular. They are now fully working in HttpClient, Angular Elements, router,
+                  and more.
+                </p>
+                <div class="terminal">
+                  <pre>{{standalone}}</pre>
+                </div>
+              </div>
+              <div class="feature">
+                <label>2. Router and HttpClient Tree-Shakable Standalone APIs</label>
+                <p>
+                  User can build a multi-route application using the new router standalone APIs! To declare the root
+                  route you can use the following:</p>
+                <div class="terminal">
+                  <pre>{{appRoutes}}</pre>
+                </div>
+                <br>
+                <p>Where lazyRoutes are declared in:</p>
+                <div class="terminal">
+                  <pre>{{lazyRoutes}}</pre>
+                </div>
+                <br>
+                <p>and finally, register the appRoutes in the bootstrapApplication call:</p>
+                <div class="terminal">
+                  <pre>{{register}}</pre>
+                </div>
+                <br>
+                <p>Also, bundlers can reduce the bundle size by around 11% by removing the unused features from the
+                  router at the build time.</p>
+              </div>
+              <div class="feature">
+                <label>3. Image Directive is Now Stable!</label>
+                <p>
+                  The Image Directive (Ngoptimized Image) was introduced with Angular version 14 in collaboration with
+                  Chrome Aurora in v14.2.
+                </p>
+                <p>
+                  The Land’s End experimented with this feature and, in a lighthouse lab test, experienced around 75%
+                  improvement in the LCP or the Largest Contentful Paint.
+                </p>
+                <div class="terminal">
+                  <pre>{{imgOptimized}}</pre>
+                </div>
+                <br>
+                <p>To use it within a component just replace the image’s src attribute with ngSrc and make sure you
+                  specify the priority attribute for your LCP images.</p>
+                <div class="terminal">
+                  <pre>{{imgSrc}}</pre>
+                </div>
+                <div>
+                  <img ngSrc="./assets/img_optimized.jpg" width="500" height="350" class="img-optimized">
+                </div>
+              </div>
+              <div class="feature">
+                <label>4. Functional router guards</label>
+                <p>
+                  Using the tree-shakable standalone router APIs, the Angular Team worked on reducing the boilerplate by
+                  refactoring the code and thereby reducing the bundle size of Angular with the new Functional Router
+                  Guards; we can refactor the code.</p>
+                <div class="terminal">
+                  <pre>{{routerGuardsOld}}</pre>
+                </div>
+                <br>
+                <p>LoginService implements most of the logic and in the guard we only invoke isLoggedIn(). Even though
+                  the guard is pretty simple, we have lots of boilerplate code.</p>
+                <p>With the new functional router guards, you can refactor this code down to:</p>
+                <div class="terminal">
+                  <pre>{{routerGuardNew}}</pre>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>

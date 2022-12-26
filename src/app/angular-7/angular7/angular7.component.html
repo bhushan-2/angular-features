@@ -1,0 +1,50 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 pd-0">
+      <div class="angular-7">
+        <label>Angular 7 Features</label>
+        <div>(Released on October 2018)</div>
+        <div class="back" [routerLink]="['/']">
+          < Back</div> </div> </div> </div> <div class="row features-scroll">
+            <div class="col-md-12">
+              <div class="feature">
+                <label>1. Application performance (Budget)</label>
+                <p>
+                  As applications grow in functionality, they also grow in size. Budgets is a feature in the Angular CLI
+                  which allows you to set budget thresholds in your configuration to ensure parts of your application
+                  stay within boundaries which you set.
+                </p>
+                <p>Angular budgets allows us to configure expected sizes of these bundles. More so, we can configure
+                  thresholds for conditions when we want to receive a warning or even fail build with an error if the
+                  bundle size gets too out of control!</p>
+                <div class="terminal">
+                  <pre>{{budget}}</pre>
+                </div>
+              </div>
+              <div class="feature">
+                <label>2. Angular Material Virtual Scroll</label>
+                <p>
+                  This is one of the new features added to Angular 7 called as Virtual Scrolling. This feature is added
+                  to CDK (Component Development Kit). Virtual scrolling shows up the visible dom elements to the user,
+                  as the user scrolls, the next list is displayed. This gives faster experience as the full list is not
+                  loaded at one go and only loaded as per the visibility on the screen.
+                </p>
+                <cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
+                  <div *cdkVirtualFor="let item of items" class="example-item">{{item}}</div>
+                </cdk-virtual-scroll-viewport>
+              </div>
+              <div class="feature">
+                <label>2. Angular Material Drag & Drop</label>
+                <p>
+                  The @angular/cdk/drag-drop module provides you with a way to easily and declaratively create
+                  drag-and-drop interfaces, with support for free dragging, sorting within a list, transferring items
+                  between lists, animations, touch devices, custom drag handles, previews, and placeholders, in addition
+                  to horizontal lists and locking along an axis.
+                </p>
+                <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+                    <div class="example-box" *ngFor="let movie of movies" cdkDrag>{{movie}}</div>
+                  </div>                  
+              </div>
+            </div>
+        </div>
+      </div>

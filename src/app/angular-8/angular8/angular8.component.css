@@ -1,0 +1,28 @@
+.angular-8 {
+    width: 100%;
+    padding: 10px;
+    background: #1976d2;
+}
+
+.angular-8 label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFF;
+    margin-left: 20px;
+}
+
+.angular-8 div {
+    font-size: 12px;
+    font-weight: 400;
+    color: #ccc;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.diff-laoding {
+    width: 420px !important;
+}
+
+.service-worker {
+    width: 650px;
+}

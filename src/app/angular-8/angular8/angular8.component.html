@@ -1,0 +1,52 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 pd-0">
+      <div class="angular-8">
+        <label>Angular 8 Features</label>
+        <div>(Released on 2019)</div>
+        <div class="back" [routerLink]="['/']">
+          < Back</div> </div> </div> </div> <div class="row features-scroll">
+            <div class="col-md-12">
+              <div class="feature">
+                <label>1. New lazy loading syntax</label>
+                <p>
+                  Lazy loading feature modules has been a best practice in Angular for quite a while. That hasn’t
+                  changed in version 8, but in place of the proprietary syntax to enable lazy loading, the framework has
+                  adopted the more common dynamic import syntax used widely in client-side web development. The new
+                  syntax relies less on parsing class names from strings and enables editors and IDEs to check that
+                  you’re importing the correct items.
+                </p>
+                <div class="terminal">
+                  <pre>{{lazyLoading}}</pre>
+                </div>
+              </div>
+              <div class="feature">
+                <label>2. Differential loading</label>
+                <p>
+                  Command Line Interface (CLI) will now produce separate bundles for modern JavaScript (ES2015+) and
+                  legacy JavaScript (ES5). Advanced modern browsers with ES2015+ support will be able to download more
+                  productive app bundles. It removes the overhead of browser compatibility. It also improves the page
+                  loading time and reduces the amount of time it takes for the page content to become interactive for
+                  users.
+                </p>
+                <div>
+                  <img class="diff-laoding" src="./assets/differential_loading.jpg" alt="Differential loading">
+                </div>
+              </div>
+              <div class="feature">
+                <label>3. Service Workers</label>
+                <p>
+                  Service workers function as a network proxy. They intercept all outgoing HTTP requests made by the
+                  application and can choose how to respond to them. For example, they can query a local cache and
+                  deliver a cached response if one is available. Proxying isn't limited to requests made through
+                  programmatic APIs, such as fetch; it also includes resources referenced in HTML and even the initial
+                  request to index.html. Service worker-based caching is thus completely programmable and doesn't rely
+                  on server-specified caching headers.
+                </p>
+                <div>
+                  <img class="service-worker" src="./assets/service_workers.jpg" alt="Differential loading">
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>

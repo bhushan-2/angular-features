@@ -1,0 +1,24 @@
+.angular-15 {
+    width: 100%;
+    padding: 10px;
+    background: #1976d2;
+}
+
+.angular-15 label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFF;
+    margin-left: 20px;
+}
+
+.angular-15 div {
+    font-size: 12px;
+    font-weight: 400;
+    color: #ccc;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.img-optimized {
+    width: 500px;
+}

@@ -1,0 +1,24 @@
+.angular-13 {
+    width: 100%;
+    padding: 10px;
+    background: #1976d2;
+}
+
+.angular-13 label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFF;
+    margin-left: 20px;
+}
+
+.angular-13 div {
+    font-size: 12px;
+    font-weight: 400;
+    color: #ccc;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.fc {
+    width: 500px;
+}

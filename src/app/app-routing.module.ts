@@ -22,6 +22,42 @@ const routes: Routes = [
   {
     path: 'angular6',
     loadChildren: () => import('./angular-6/angular-6.module').then(m => m.Angular6Module)
+  },
+  {
+    path: 'angular7',
+    loadChildren: () => import('./angular-7/angular-7.module').then(m => m.Angular7Module)
+  },
+  {
+    path: 'angular8',
+    loadChildren: () => import('./angular-8/angular-8.module').then(m => m.Angular8Module)
+  },
+  {
+    path: 'angular9',
+    loadChildren: () => import('./angular-9/angular-9.module').then(m => m.Angular9Module)
+  },
+  {
+    path: 'angular10',
+    loadChildren: () => import('./angular-10/angular-10.module').then(m => m.Angular10Module)
+  },
+  {
+    path: 'angular11',
+    loadChildren: () => import('./angular-11/angular-11.module').then(m => m.Angular11Module)
+  },
+  {
+    path: 'angular12',
+    loadChildren: () => import('./angular-12/angular-12.module').then(m => m.Angular12Module)
+  },
+  {
+    path: 'angular13',
+    loadChildren: () => import('./angular-13/angular-13.module').then(m => m.Angular13Module)
+  },
+  {
+    path: 'angular14',
+    loadChildren: () => import('./angular-14/angular-14.module').then(m => m.Angular14Module)
+  },
+  {
+    path: 'angular15',
+    loadChildren: () => import('./angular-15/angular-15.module').then(m => m.Angular15Module)
   }
 ];
 
@@ -29,5 +65,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { 
+export class AppRoutingModule {
 }
