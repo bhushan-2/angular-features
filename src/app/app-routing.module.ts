@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ErrorHandlerComponent } from './error-handler/error-handler.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
-    path: '/angular-versions',
+    path: '',
     component: HomeComponent
   },
   {
@@ -58,7 +59,11 @@ const routes: Routes = [
   {
     path: 'angular15',
     loadChildren: () => import('./angular-15/angular-15.module').then(m => m.Angular15Module)
-  }
+  },
+  {
+    path: '**',
+    component: ErrorHandlerComponent
+  },
 ];
 
 @NgModule({
