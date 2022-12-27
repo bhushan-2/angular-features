@@ -1,0 +1,91 @@
+.btn-profile {
+    background: #1976d2;
+    border: #1976d2;
+    width: auto;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .btn-profile:focus {
+    box-shadow: none;
+  }
+  
+  .btn-profile img {
+    margin: 0;
+  }
+  
+  .btn-profile a {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    border-radius: 20px;
+    border: 3px solid #fff;
+    display: block;
+    height: 38px;
+    width: 40px;
+  }
+  
+  .profile {
+    position: absolute;
+    right: 82px;
+    bottom: 15px;
+  }
+  
+  .dropdown-menu {
+    padding: 10px;
+    text-align: center;
+    flex-direction: column;
+    width: 300px;
+    height: 260px;
+    top: 6px !important;
+    left: -216px;
+  }
+  
+  .dropdown-menu>div {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .dropdown-menu>p {
+    font-size: 12px;
+    font-weight: 400;
+  }
+  
+  .dropdown-toggle::after {
+    display: none;
+  }
+  
+  .dropdown-menu>span {
+    font-size: 10px;
+    font-weight: 500;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px 6px;
+    margin: 1px 4px;
+    background: #1976d2;
+    color: white;
+  }
+  
+  .drawer {
+    background: #1976d2;
+    border: none;
+    color: white;
+    margin: 0px 10px;
+  }
+  
+  .cursor-pointer {
+    cursor: pointer;
+  }
+
+  .side-div {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    background: #1976d2;
+    color: white;
+    font-weight: 500;
+    margin: 0px 0px;
+    padding: 0px 40px;
+  }

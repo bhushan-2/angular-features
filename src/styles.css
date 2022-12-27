@@ -352,7 +352,33 @@ svg#clouds {
   font-weight: 500;
 }
 
-.features-scroll {
+/* .features-scroll {
   height: calc(100vh - 54px);
   overflow: auto;
+} */
+
+.mg-top {
+    margin-top: 80px;
+}
+
+/* angular features parent div css */
+
+.angular {
+    width: 100%;
+    padding: 10px;
+    color: #1976d2;
+}
+
+.angular label {
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+.angular div {
+    font-size: 12px;
+    font-weight: 400;
+    color: #ccc;
+    display: inline-block;
+    margin-left: 10px;
 }
