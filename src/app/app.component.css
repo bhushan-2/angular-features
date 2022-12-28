@@ -2,8 +2,8 @@
   background: #1976d2;
   border: #1976d2;
   width: auto;
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 28px;
 }
 
 .btn-profile:focus {
@@ -15,20 +15,21 @@
 }
 
 .btn-profile a {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 700;
-  color: white;
+  color: #fff;
   border-radius: 20px;
   border: 3px solid #fff;
   display: block;
-  height: 38px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
 }
 
 .profile {
   position: absolute;
   right: 35px;
-  top: 5px;
+  top: 10px;
+  font-size: 13px;
 }
 
 .dropdown-menu {
@@ -150,9 +151,10 @@
 
 .ng-live {
   position: absolute;
-  right: 135px;
-  top: 18px;
+  right: 85px;
+  top: 20px;
   cursor: pointer;
+  font-size: 14px;
 }
 
 .ng-live img {
