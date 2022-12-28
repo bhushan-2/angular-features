@@ -8,10 +8,29 @@ import { Component } from '@angular/core';
 export class AngularLiveComponent {
 
   animationCommand = `
+  // npm install @angular/animations
   //import module in app.module.ts
 
-  import { BrowserAnimationsModule } from '@angular/platform-browser/animations;'
+  import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+  // app.module.ts 
+  import { NgModule } from '@angular/core';
+  import { BrowserModule } from '@angular/platform-browser';
+  import { FormsModule } from '@angular/forms';
+
+  import { AppComponent } from './app.component';
+  import { HelloComponent } from './hello.component';
+  import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+  @NgModule({
+    imports:      [ BrowserModule, FormsModule, BrowserAnimationsModule ],
+    declarations: [ AppComponent, HelloComponent ],
+    bootstrap:    [ AppComponent ]
+  })
+  export class AppModule { }
   `;
+
+
   animationComponent = `
   // define app.component.ts as shown below
 
@@ -20,9 +39,9 @@ export class AngularLiveComponent {
   import { ActivatedRoute } from '@angular/router';
 
   @Component({
-    selector: 'app-root',
+    selector: 'my-app',
     templateUrl: './app.component.html',
-    styleUrls: ['./app.component.css'],
+    styleUrls: [ './app.component.css' ],
     animations: [
       trigger('changeDivSize', [
         state('initial', style({
@@ -60,6 +79,34 @@ export class AngularLiveComponent {
             <div [@changeDivSize]=currentState></div>
             <br />
           </div>
-          </div
+          </div>
+
+  //add CSS code in app.component.css as shown below
+
+          .animations {
+            display: flex;
+            flex-wrap: wrap;
+          }
+        
+          .animations > div {
+              width: 550px;
+              height: 300px;
+              border: 1px solid #ccc;
+              margin: 10px 10px;
+              display: inline-block;
+              border-radius: 5px;
+          }
+
+          .resize label {
+              font-size: 14px;
+              font-weight: 500;
+              margin: 5px;
+          }
+
+          .resize button {
+              display: block;
+              margin: 10px;
+              font-size: 12px;
+          }
   `;
 }
