@@ -58,6 +58,15 @@ export class Angular4Component {
 
   animationCommand = `import { BrowserAnimationsModule } from '@angular/platform-browse/animations;'`;
 
+  ngIfWithElse = `
+  <span *ngIf="isavailable; else condition1">Condition is valid.</span>
+  <ng-template #condition1>Condition is invalid</ng-template>`;
+
+  asKeyword = `
+  <div *ngFor="let i of months | slice:0:5 as total">
+   Months: {{i}} Total: {{total.length}}
+  </div>`;
+
   currentState = 'initial';
   currentStateBallon = 'start';
   listItem:any = [];

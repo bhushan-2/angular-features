@@ -12,7 +12,7 @@ export class AppComponent {
 
   angularVersions = [
     { 'version': 'Angular 2', 'route': 'angular2', 'features': ['Components', 'Directives', 'Support for mobile or low end devices'] },
-    { 'version': 'Angular 4', 'route': 'angular4','features': ['Animations'] },
+    { 'version': 'Angular 4', 'route': 'angular4','features': ['Animations', 'ngIf with else', 'as keyword in for loop'] },
     { 'version': 'Angular 5', 'route': 'angular5','features': ['HttpClient', 'Internationalized Pipes', 'Support for Multiple Export Alias in Angular 5'] },
     { 'version': 'Angular 6', 'route': 'angular6','features': ['ElementRef', 'New method of registering a service', 'RxJS 6.0'] },
     { 'version': 'Angular 7', 'route': 'angular7','features': ['Application performance (Budget)', 'Virtual Scroll', 'Material Drag & Drop'] },
