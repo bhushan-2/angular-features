@@ -1,7 +1,7 @@
 <mat-drawer-container class="example-container" autosize>
   <mat-drawer #drawer class="example-sidenav" mode="side">
     
-    <div class="side-div">Angular Versions</div>
+    <div class="side-div">Versions Menu</div>
     <mat-accordion>
       <mat-expansion-panel *ngFor="let version of angularVersions">
         <mat-expansion-panel-header>
@@ -10,7 +10,7 @@
           </mat-panel-title>
         </mat-expansion-panel-header>
         <ng-container *ngFor="let feature of version.features">
-          <p>{{feature}}</p>
+          <p class="f-12">{{feature}}</p>
         </ng-container>
       </mat-expansion-panel>
     </mat-accordion>
@@ -29,7 +29,7 @@
       </button>
       <img width="40" alt="Angular Logo" [routerLink]="['/']" class="cursor-pointer"
         src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" />
-      <span class="cursor-pointer" [routerLink]="['/']">Welcome</span>
+      <span class="cursor-pointer" [routerLink]="['/']">Angular Versions</span>
       <div class="spacer"></div>
       <div class="dropdown profile">
         <button class="btn dropdown-toggle btn-profile" type="button" id="dropdownMenuButton" data-toggle="dropdown"
@@ -39,7 +39,7 @@
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           <div>Bhushan Bobhate</div>
           <p>Frontend Developer</p>
-          <div>Skills</div>
+          <div>My Skills</div>
           <span>Angular
             2+</span><span>JavaScript</span><span>TypeScript</span><span>HTML/CSS</span><span>Bootstrap</span><span>JQuery</span><span>React</span>
           <br>

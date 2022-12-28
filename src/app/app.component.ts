@@ -12,16 +12,16 @@ export class AppComponent {
   angularVersions = [
     { 'version': 'Angular 2', 'features': ['Components', 'Directives', 'Support for mobile or low end devices'] },
     { 'version': 'Angular 4', 'features': ['Animations'] },
-    { 'version': 'Angular 5', 'features': ['HttpClient','Internationalized Pipes', 'Support for Multiple Export Alias in Angular 5'] },
-    { 'version': 'Angular 6', 'features': ['Animations'] },
-    { 'version': 'Angular 7', 'features': ['Animations'] },
-    { 'version': 'Angular 8', 'features': ['Animations'] },
-    { 'version': 'Angular 9', 'features': ['Animations'] },
-    { 'version': 'Angular 10', 'features': ['Animations'] },
-    { 'version': 'Angular 11', 'features': ['Animations'] },
-    { 'version': 'Angular 12', 'features': ['Animations'] },
-    { 'version': 'Angular 13', 'features': ['Animations'] },
-    { 'version': 'Angular 14', 'features': ['Animations'] },
-    { 'version': 'Angular 15', 'features': ['Animations'] }
+    { 'version': 'Angular 5', 'features': ['HttpClient', 'Internationalized Pipes', 'Support for Multiple Export Alias in Angular 5'] },
+    { 'version': 'Angular 6', 'features': ['ElementRef', 'New method of registering a service', 'RxJS 6.0'] },
+    { 'version': 'Angular 7', 'features': ['Application performance (Budget)', 'Virtual Scroll', 'Material Drag & Drop'] },
+    { 'version': 'Angular 8', 'features': ['Dynamic lazy loading', 'Differential loading', 'Service Workers'] },
+    { 'version': 'Angular 9', 'features': ['Ivy', 'Improved CSS class and style binding', ''] },
+    { 'version': 'Angular 10', 'features': ['New Date Range Picker', 'Optional Stricter Settings', 'Generic with ModuleWithProviders'] },
+    { 'version': 'Angular 11', 'features': ['Automatic Inlining of Fonts', 'Hot Module Replacement', 'Improved Reporting and Logging', 'Experimental Webpack 5 Support'] },
+    { 'version': 'Angular 12', 'features': ['Nullish Coalescing', 'HTTP improvements', 'Styling improvements'] },
+    { 'version': 'Angular 13', 'features': ['Form Validation Improvements', 'Enhancements to Angular Tests', 'Update Component API’s', 'Angular CLI Enhancements'] },
+    { 'version': 'Angular 14', 'features': ['Standalone Components', 'Typed Angular Forms', 'Streamlined page title accessibility', 'Extended Developer Diagnostics'] },
+    { 'version': 'Angular 15', 'features': ['Stable Standalone Components', 'Router and HttpClient Tree-Shakable Standalone APIs', 'Stable Image Directive', 'Functional router guards'] }
   ]
 }
