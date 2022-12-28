@@ -354,27 +354,27 @@ svg#clouds {
 }
 
 .mg-top {
-    margin-top: 70px;
+  margin-top: 70px;
 }
 
 /* angular features parent div css */
 
 .angular {
-    width: 100%;
-    padding: 10px;
-    color: #1976d2;
+  width: 100%;
+  padding: 10px;
+  color: #1976d2;
 }
 
 .angular label {
-    font-size: 18px;
-    font-weight: 600;
-    margin-left: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 20px;
 }
 
 .angular div {
-    font-size: 12px;
-    font-weight: 400;
-    color: #ccc;
-    display: inline-block;
-    margin-left: 10px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #ccc;
+  display: inline-block;
+  margin-left: 10px;
 }

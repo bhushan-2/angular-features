@@ -127,6 +127,10 @@
   margin-top: 60px;
 }
 
+.hamburger rect {
+  fill: white;
+}
+
 /* Material Acordion CSS */
 
 ::ng-deep .mat-expansion-panel-spacing {
