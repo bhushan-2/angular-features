@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-angular7',
@@ -28,6 +29,18 @@ export class Angular7Component {
     'Episode IX – The Rise of Skywalker',
   ];
 
+  constructor(private route: ActivatedRoute) {
+    this.route.queryParams.subscribe(params => {
+      const featureIndex = params['index'];
+      setTimeout(() => {
+        const element = document.getElementById(featureIndex);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+        }
+      }, 100)
+    });
+  }
+  
   drop(event: CdkDragDrop<string[]>) {
     moveItemInArray(this.movies, event.previousIndex, event.currentIndex);
   }

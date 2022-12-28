@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-angular2',
@@ -15,4 +16,16 @@ export class Angular2Component {
     HTML template while Controller in actual the JavaScript behaviour.`,
     'command': 'ng generate component my-component'
   }]
+
+  constructor(private route: ActivatedRoute) {
+    this.route.queryParams.subscribe(params => {
+      const featureIndex = params['index'];
+      setTimeout(() => {
+        const element = document.getElementById(featureIndex);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+        }
+      }, 100)
+    });
+  }
 }

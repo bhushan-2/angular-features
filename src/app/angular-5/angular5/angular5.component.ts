@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-angular5',
@@ -21,4 +22,17 @@ export class Angular5Component {
   }`;
   currentDate = new Date();
   datePipe = `<p>The current date & time is: {{ currentDate | date:'medium' }}</p>`;
+
+  constructor(private route: ActivatedRoute) {
+    this.route.queryParams.subscribe(params => {
+      const featureIndex = params['index'];
+      setTimeout(() => {
+        const element = document.getElementById(featureIndex);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+        }
+      }, 100)
+    });
+  }
+  
 }

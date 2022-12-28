@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-angular4',
@@ -63,6 +64,18 @@ export class Angular4Component {
   listRecord:any = [];
   list_order: number = 1;
   list_record_order: number = 1;
+
+  constructor(private route: ActivatedRoute) {
+    this.route.queryParams.subscribe(params => {
+      const featureIndex = params['index'];
+      setTimeout(() => {
+        const element = document.getElementById(featureIndex);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+        }
+      }, 100)
+    });
+  }
 
   addItem() {
     const item = "List Item " + this.list_order;

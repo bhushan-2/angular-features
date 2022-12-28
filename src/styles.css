@@ -29,7 +29,7 @@ p {
 }
 
 .toolbar {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
@@ -39,6 +39,7 @@ p {
   background-color: #1976d2;
   color: white;
   font-weight: 600;
+  z-index: 1;
 }
 
 .toolbar img {
@@ -352,13 +353,8 @@ svg#clouds {
   font-weight: 500;
 }
 
-/* .features-scroll {
-  height: calc(100vh - 54px);
-  overflow: auto;
-} */
-
 .mg-top {
-    margin-top: 80px;
+    margin-top: 70px;
 }
 
 /* angular features parent div css */

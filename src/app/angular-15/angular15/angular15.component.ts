@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-angular15',
@@ -44,7 +45,7 @@ export class Angular15Component {
     providers: [
       provideRouter(appRoutes)
     ]
-  });`
+  });`;
 
   imgOptimized = `
   import { NgOptimizedImage } from '@angular/common';
@@ -83,6 +84,17 @@ export class Angular15Component {
   const route = {
     path: 'admin',
     canActivate: [() => inject(LoginService).isLoggedIn()]
-  };`
+  };`;
 
+  constructor(private route: ActivatedRoute) {
+    this.route.queryParams.subscribe(params => {
+      const featureIndex = params['index'];
+      setTimeout(() => {
+        const element = document.getElementById(featureIndex);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+        }
+      }, 100)
+    });
+  }
 }

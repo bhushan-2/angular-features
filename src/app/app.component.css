@@ -27,8 +27,8 @@
 
 .profile {
   position: absolute;
-  right: 82px;
-  bottom: 15px;
+  right: 35px;
+  top: 5px;
 }
 
 .dropdown-menu {
@@ -88,11 +88,43 @@
   font-weight: 500;
   margin: 0px 0px;
   padding: 0px 40px;
+  position: fixed;
+  z-index: 1;
+  width: 24.7%;
 }
 
 .f-12 {
   font-size: 12px;
   cursor: pointer;
+}
+
+.pos-fixed {
+  position: fixed;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #1976d2;
+  width: 100%;
+}
+
+.mg-top-60 {
+  top: 60px;
+}
+
+.sidenav-fixed {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #1976d2;
+  color: white;
+  font-weight: 600;
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+}
+
+.accordion-body {
+  margin-top: 60px;
 }
 
 /* Material Acordion CSS */
@@ -102,9 +134,9 @@
 }
 
 ::ng-deep .mat-expansion-panel-header {
-    height: 44px !important;
+  height: 44px !important;
 }
 
 ::ng-deep .mat-expansion-panel-body {
-    padding: 0 24px 0px !important;
+  padding: 0 24px 0px !important;
 }

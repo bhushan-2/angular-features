@@ -8,6 +8,7 @@ import { ErrorHandlerComponent } from './error-handler/error-handler.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatIconModule,
     MatExpansionModule
   ],
-  providers: [],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

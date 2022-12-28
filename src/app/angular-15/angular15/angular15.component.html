@@ -7,7 +7,7 @@
         <div class="back" [routerLink]="['/']">
           < Back</div> </div> </div> </div> <div class="row features-scroll">
             <div class="col-md-12">
-              <div class="feature">
+              <div class="feature" id="1">
                 <label>1. Stable Standalone Components</label>
                 <p>
                   Angular Team introduced the Standalone API with Angular 14, allowing developers to build applications
@@ -23,7 +23,7 @@
                   <pre>{{standalone}}</pre>
                 </div>
               </div>
-              <div class="feature">
+              <div class="feature" id="2">
                 <label>2. Router and HttpClient Tree-Shakable Standalone APIs</label>
                 <p>
                   User can build a multi-route application using the new router standalone APIs! To declare the root
@@ -45,7 +45,7 @@
                 <p>Also, bundlers can reduce the bundle size by around 11% by removing the unused features from the
                   router at the build time.</p>
               </div>
-              <div class="feature">
+              <div class="feature" id="3">
                 <label>3. Image Directive is Now Stable!</label>
                 <p>
                   The Image Directive (Ngoptimized Image) was introduced with Angular version 14 in collaboration with
@@ -68,7 +68,7 @@
                   <img ngSrc="./assets/img_optimized.jpg" width="500" height="350" class="img-optimized">
                 </div>
               </div>
-              <div class="feature">
+              <div class="feature" id="4">
                 <label>4. Functional router guards</label>
                 <p>
                   Using the tree-shakable standalone router APIs, the Angular Team worked on reducing the boilerplate by

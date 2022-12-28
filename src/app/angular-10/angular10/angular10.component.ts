@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-angular10',
@@ -32,4 +33,17 @@ export class MyModule {
     };
   }
 }`;
+
+constructor(private route: ActivatedRoute) {
+  this.route.queryParams.subscribe(params => {
+    const featureIndex = params['index'];
+    setTimeout(() => {
+      const element = document.getElementById(featureIndex);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+      }
+    }, 100)
+  });
+}
+
 }
