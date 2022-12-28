@@ -144,3 +144,18 @@
 ::ng-deep .mat-expansion-panel-body {
   padding: 0 24px 0px !important;
 }
+
+
+/* Live Option */
+
+.ng-live {
+  position: absolute;
+  right: 135px;
+  top: 18px;
+  cursor: pointer;
+}
+
+.ng-live img {
+  margin: -17px 1px;
+  width: 32px;
+}

@@ -61,8 +61,12 @@ const routes: Routes = [
     loadChildren: () => import('./angular-15/angular-15.module').then(m => m.Angular15Module)
   },
   {
+    path: 'live',
+    loadChildren: () => import('./angular-run/angular-run.module').then(m => m.AngularRunModule)
+  },
+  {
     path: '**',
-    redirectTo: ''
+    component: ErrorHandlerComponent
   },
 ];
 

@@ -1,0 +1,22 @@
+.ng-demo {
+  width: 97%;
+  height: 86vh;
+  margin: 0px 17px;
+}
+
+.terminal-height {
+  max-height: 300px;
+  overflow-y: auto;
+  margin: 0px 9px;
+}
+
+.terminal-parent {
+  display: flex;
+  margin: 10px;
+}
+
+.feature-heading {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0px 28px;
+}
