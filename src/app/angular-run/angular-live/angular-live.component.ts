@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { ng4codes } from '../codes/angular4.code';
+import { ng5codes } from '../codes/angular5.code';
+import { ng6codes } from '../codes/angular6.code';
+import { ng7codes } from '../codes/angular7.code';
 
 
 @Component({
@@ -18,7 +21,7 @@ export class AngularLiveComponent {
   versions = [
     // { 'version': 'Angular 2', 'route': 'angular2', 'features': ['Components', 'Directives', 'Support for mobile or low end devices'] },
     { 'version': 'Angular 4', 'route': 'angular4', 'features': ['Animations', 'ngIf with else', 'as keyword in for loop'] },
-    { 'version': 'Angular 5', 'route': 'angular5', 'features': ['HttpClient', 'Internationalized Pipes', 'Support for Multiple Export Alias in Angular 5'] },
+    { 'version': 'Angular 5', 'route': 'angular5', 'features': ['HttpClient', 'Internationalized Pipes', 'Support for Multiple Export Alias'] },
     { 'version': 'Angular 6', 'route': 'angular6', 'features': ['ElementRef', 'New method of registering a service', 'RxJS 6.0'] },
     { 'version': 'Angular 7', 'route': 'angular7', 'features': ['Application performance (Budget)', 'Virtual Scroll', 'Material Drag & Drop'] },
     { 'version': 'Angular 8', 'route': 'angular8', 'features': ['Dynamic lazy loading', 'Differential loading', 'Service Workers'] },
@@ -45,6 +48,9 @@ export class AngularLiveComponent {
     this.features = [...this.features];
     switch (data.route) {
       case 'angular4': this.currentCodes = ng4codes; break;
+      case 'angular5': this.currentCodes = ng5codes; break;
+      case 'angular6': this.currentCodes = ng6codes; break;
+      case 'angular7': this.currentCodes = ng7codes; break;
     }
 
   }

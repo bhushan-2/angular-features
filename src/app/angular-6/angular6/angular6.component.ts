@@ -7,7 +7,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./angular6.component.css']
 })
 export class Angular6Component {
-  elementRef = `@ViewChild('login') login: ElementRef<HTMLInputElement>;
+  elementRef = `@ViewChild('login') loginInput: ElementRef<HTMLInputElement>;
 
   ngAfterViewInit() {
   

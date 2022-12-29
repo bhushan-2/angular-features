@@ -13,13 +13,13 @@
       </div>
       <!-- <div class="feature-heading">Angular Animations</div> -->
       <div class="terminal-parent">
-        <div class="terminal terminal-height" *ngIf="code.moduleCode != ''">
+        <div class="terminal terminal-height" *ngIf="code && code.moduleCode != ''">
           <pre>{{code.moduleCode}}</pre>
         </div>
-        <div class="terminal terminal-height" *ngIf="code.componentCode != ''">
+        <div class="terminal terminal-height" *ngIf="code && code.componentCode != ''">
           <pre>{{code.componentCode}}</pre>
         </div>
-        <div class="terminal terminal-height" *ngIf="code.htmlCode != ''">
+        <div class="terminal terminal-height" *ngIf="code && code.htmlCode != ''">
           <pre>{{code.htmlCode}}</pre>
         </div>
       </div>
