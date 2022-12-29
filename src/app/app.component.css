@@ -1,6 +1,6 @@
 .btn-profile {
-  background: #1976d2;
-  border: #1976d2;
+  background: #0c243c;
+  border: #0c243c;
   width: auto;
   width: 36px;
   height: 28px;
@@ -64,12 +64,12 @@
   border-radius: 4px;
   padding: 5px 6px;
   margin: 1px 4px;
-  background: #1976d2;
+  background: #0c243c;
   color: white;
 }
 
 .drawer {
-  background: #1976d2;
+  background: #0c243c;
   border: none;
   color: white;
   margin: 0px 10px;
@@ -84,7 +84,7 @@
   display: flex;
   align-items: center;
   font-size: 17px;
-  background: #1976d2;
+  background: #0c243c;
   color: white;
   font-weight: 500;
   margin: 0px 0px;
@@ -104,7 +104,7 @@
   height: 60px;
   display: flex;
   align-items: center;
-  background-color: #1976d2;
+  background-color: #0c243c;
   width: 100%;
 }
 
@@ -116,7 +116,7 @@
   height: 60px;
   display: flex;
   align-items: center;
-  background-color: #1976d2;
+  background-color: #0c243c;
   color: white;
   font-weight: 600;
   z-index: 2;
@@ -159,7 +159,6 @@
 ::ng-deep .mat-expansion-panel-body {
   padding: 0 24px 0px !important;
 }
-
 
 
 /* Live Option */

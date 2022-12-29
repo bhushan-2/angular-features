@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~@ng-select/ng-select/themes/material.theme.css";
+
 
 :host {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -36,7 +38,7 @@ p {
   height: 60px;
   display: flex;
   align-items: center;
-  background-color: #1976d2;
+  background-color: #0c243c;
   color: white;
   font-weight: 600;
   z-index: 1;
@@ -130,7 +132,7 @@ svg.material-icons:not(:last-child) {
 }
 
 .card.highlight-card {
-  background-color: #1976d2;
+  background-color: #0c243c;
   color: white;
   font-weight: 600;
   border: none;
@@ -161,7 +163,7 @@ svg#rocket-smoke {
 a,
 a:visited,
 a:hover {
-  color: #1976d2;
+  color: #0c243c;
   text-decoration: none;
 }
 
@@ -362,7 +364,7 @@ svg#clouds {
 .angular {
   width: 100%;
   padding: 10px;
-  color: #1976d2;
+  color: #0c243c;
 }
 
 .angular label {
@@ -377,4 +379,10 @@ svg#clouds {
   color: #ccc;
   display: inline-block;
   margin-left: 10px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #0c243c !important;
+  border-color: #0c243c !important;
 }

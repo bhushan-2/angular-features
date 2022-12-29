@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ng4codes } from '../codes/angular4.code';
+
 
 @Component({
   selector: 'app-angular-live',
@@ -7,106 +9,47 @@ import { Component } from '@angular/core';
 })
 export class AngularLiveComponent {
 
-  animationCommand = `
-  // npm install @angular/animations
-  //import module in app.module.ts
+  code = {
+    moduleCode: '',
+    componentCode: '',
+    htmlCode: ''
+  }
 
-  import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+  versions = [
+    // { 'version': 'Angular 2', 'route': 'angular2', 'features': ['Components', 'Directives', 'Support for mobile or low end devices'] },
+    { 'version': 'Angular 4', 'route': 'angular4', 'features': ['Animations', 'ngIf with else', 'as keyword in for loop'] },
+    { 'version': 'Angular 5', 'route': 'angular5', 'features': ['HttpClient', 'Internationalized Pipes', 'Support for Multiple Export Alias in Angular 5'] },
+    { 'version': 'Angular 6', 'route': 'angular6', 'features': ['ElementRef', 'New method of registering a service', 'RxJS 6.0'] },
+    { 'version': 'Angular 7', 'route': 'angular7', 'features': ['Application performance (Budget)', 'Virtual Scroll', 'Material Drag & Drop'] },
+    { 'version': 'Angular 8', 'route': 'angular8', 'features': ['Dynamic lazy loading', 'Differential loading', 'Service Workers'] },
+    { 'version': 'Angular 9', 'route': 'angular9', 'features': ['Ivy', 'Improved CSS class and style binding', ''] },
+    { 'version': 'Angular 10', 'route': 'angular10', 'features': ['New Date Range Picker', 'Optional Stricter Settings', 'Generic with ModuleWithProviders'] },
+    { 'version': 'Angular 11', 'route': 'angular11', 'features': ['Automatic Inlining of Fonts', 'Hot Module Replacement', 'Improved Reporting and Logging', 'Experimental Webpack 5 Support'] },
+    { 'version': 'Angular 12', 'route': 'angular12', 'features': ['Nullish Coalescing', 'HTTP improvements', 'Styling improvements'] },
+    { 'version': 'Angular 13', 'route': 'angular13', 'features': ['Form Validation Improvements', 'Enhancements to Angular Tests', 'Update Component API’s', 'Angular CLI Enhancements'] },
+    { 'version': 'Angular 14', 'route': 'angular14', 'features': ['Standalone Components', 'Typed Angular Forms', 'Streamlined page title accessibility', 'Extended Developer Diagnostics'] },
+    { 'version': 'Angular 15', 'route': 'angular15', 'features': ['Stable Standalone Components', 'Router and HttpClient Tree-Shakable Standalone APIs', 'Stable Image Directive', 'Functional router guards'] }
+  ];
+  features: string[] = [];
+  selectedVersion: any;
+  selectedFeature: any;
+  currentCodes: any;
 
-  // app.module.ts 
-  import { NgModule } from '@angular/core';
-  import { BrowserModule } from '@angular/platform-browser';
-  import { FormsModule } from '@angular/forms';
+  constructor() {
 
-  import { AppComponent } from './app.component';
-  import { HelloComponent } from './hello.component';
-  import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+  }
 
-  @NgModule({
-    imports:      [ BrowserModule, FormsModule, BrowserAnimationsModule ],
-    declarations: [ AppComponent, HelloComponent ],
-    bootstrap:    [ AppComponent ]
-  })
-  export class AppModule { }
-  `;
-
-
-  animationComponent = `
-  // define app.component.ts as shown below
-
-  import { Component } from '@angular/core';
-  import { trigger, state, style, animate, transition } from '@angular/animations';
-  import { ActivatedRoute } from '@angular/router';
-
-  @Component({
-    selector: 'my-app',
-    templateUrl: './app.component.html',
-    styleUrls: [ './app.component.css' ],
-    animations: [
-      trigger('changeDivSize', [
-        state('initial', style({
-          backgroundColor: '#ccc',
-          width: '100px',
-          height: '100px'
-        })),
-        state('final', style({
-          backgroundColor: '#1678df',
-          width: '200px',
-          height: '200px'
-        })),
-        transition('initial=>final', animate('1500ms')),
-        transition('final=>initial', animate('1000ms'))
-      ])  ]
-  })
-  export class AppComponent {
-
-    currentState = 'initial';
-    currentStateBallon = 'start';
-
-    changeSquareState() {
-      this.currentState = this.currentState === 'initial' ? 'final' : 'initial';
+  setFeatures(data: any) {
+    const obj = this.versions.find(record => record.route == data.route);
+    this.features = obj?.features || [];
+    this.features = [...this.features];
+    switch (data.route) {
+      case 'angular4': this.currentCodes = ng4codes; break;
     }
 
   }
-`;
-  animationHTML = `
-  //add html code in app.component.html as shown below
 
-          <div class="animations">
-          <div class="resize">
-            <label>Change the div size</label>
-            <button class="btn btn-primary" (click)="changeSquareState()">Change Size</button>
-            <div [@changeDivSize]=currentState></div>
-            <br />
-          </div>
-          </div>
-
-  //add CSS code in app.component.css as shown below
-
-          .animations {
-            display: flex;
-            flex-wrap: wrap;
-          }
-        
-          .animations > div {
-              width: 550px;
-              height: 300px;
-              border: 1px solid #ccc;
-              margin: 10px 10px;
-              display: inline-block;
-              border-radius: 5px;
-          }
-
-          .resize label {
-              font-size: 14px;
-              font-weight: 500;
-              margin: 5px;
-          }
-
-          .resize button {
-              display: block;
-              margin: 10px;
-              font-size: 12px;
-          }
-  `;
+  setCodes(feature: string) {
+    this.code = this.currentCodes[feature];
+  }
 }
