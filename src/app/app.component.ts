@@ -7,8 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular Versions';
-  panelOpenState = false;
-  isExpanded = false;
+  isSidebarOpen = false;
 
   angularVersions = [
     { 'version': 'Angular 2', 'route': 'angular2', 'features': ['Components', 'Directives', 'Support for mobile or low end devices'] },
@@ -25,4 +24,16 @@ export class AppComponent {
     { 'version': 'Angular 14', 'route': 'angular14','features': ['Standalone Components', 'Typed Angular Forms', 'Streamlined page title accessibility', 'Extended Developer Diagnostics'] },
     { 'version': 'Angular 15', 'route': 'angular15','features': ['Stable Standalone Components', 'Router and HttpClient Tree-Shakable Standalone APIs', 'Stable Image Directive', 'Functional router guards'] }
   ]
+
+  open(e:any) {
+    setTimeout(() =>{
+      this.isSidebarOpen = true;
+    }, 10)
+  }
+
+  close(e:any) {
+    setTimeout(() =>{
+      this.isSidebarOpen = false;
+    }, 10)
+  }
 }
