@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ng2codes } from '../codes/angular2.code';
 import { ng4codes } from '../codes/angular4.code';
 import { ng5codes } from '../codes/angular5.code';
 import { ng6codes } from '../codes/angular6.code';
@@ -19,7 +20,7 @@ export class AngularLiveComponent {
   }
 
   versions = [
-    // { 'version': 'Angular 2', 'route': 'angular2', 'features': ['Components', 'Directives', 'Support for mobile or low end devices'] },
+    { 'version': 'Angular 2', 'route': 'angular2', 'features': ['Components', 'Directives'] },
     { 'version': 'Angular 4', 'route': 'angular4', 'features': ['Animations', 'ngIf with else', 'as keyword in for loop'] },
     { 'version': 'Angular 5', 'route': 'angular5', 'features': ['HttpClient', 'Internationalized Pipes', 'Support for Multiple Export Alias'] },
     { 'version': 'Angular 6', 'route': 'angular6', 'features': ['ElementRef', 'New method of registering a service', 'RxJS 6.0'] },
@@ -47,6 +48,7 @@ export class AngularLiveComponent {
     this.features = obj?.features || [];
     this.features = [...this.features];
     switch (data.route) {
+      case 'angular2': this.currentCodes = ng2codes; break;
       case 'angular4': this.currentCodes = ng4codes; break;
       case 'angular5': this.currentCodes = ng5codes; break;
       case 'angular6': this.currentCodes = ng6codes; break;
