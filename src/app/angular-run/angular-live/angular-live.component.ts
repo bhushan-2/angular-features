@@ -4,6 +4,8 @@ import { ng4codes } from '../codes/angular4.code';
 import { ng5codes } from '../codes/angular5.code';
 import { ng6codes } from '../codes/angular6.code';
 import { ng7codes } from '../codes/angular7.code';
+import { ActivatedRoute } from '@angular/router';
+import { DomSanitizer } from "@angular/platform-browser";
 
 
 @Component({
@@ -37,27 +39,39 @@ export class AngularLiveComponent {
   features: string[] = [];
   selectedVersion: any;
   selectedFeature: any;
-  currentCodes: any;
+  editorLinks: any;
+  currentVersion: any;
+  currentFeatureIndex = 0;
+  editorURL = '';
 
-  constructor() {
-
+  constructor(private route: ActivatedRoute, public sanitizer:DomSanitizer) {
+    this.route.queryParams.subscribe(params => {
+      this.currentVersion = params['version'];
+      this.currentFeatureIndex = params['index'];
+      this.setURL();
+    });
   }
 
-  setFeatures(data: any) {
-    const obj = this.versions.find(record => record.route == data.route);
-    this.features = obj?.features || [];
-    this.features = [...this.features];
-    switch (data.route) {
-      case 'angular2': this.currentCodes = ng2codes; break;
-      case 'angular4': this.currentCodes = ng4codes; break;
-      case 'angular5': this.currentCodes = ng5codes; break;
-      case 'angular6': this.currentCodes = ng6codes; break;
-      case 'angular7': this.currentCodes = ng7codes; break;
+  setURL() {
+    // const obj = this.versions.find(record => record.route == data.route);
+    // this.features = obj?.features || [];
+    // this.features = [...this.features];
+    switch (this.currentVersion) {
+      case 'angular2': this.editorLinks = ng2codes; break;
+      case 'angular4': this.editorLinks = ng4codes; break;
+      case 'angular5': this.editorLinks = ng5codes; break;
+      case 'angular6': this.editorLinks = ng6codes; break;
+      case 'angular7': this.editorLinks = ng7codes; break;
+    }
+
+    const version = this.versions.find(record => record.route == this.currentVersion);
+    if (version) {
+      this.editorURL = this.editorLinks[version.features[this.currentFeatureIndex]];
     }
 
   }
 
   setCodes(feature: string) {
-    this.code = this.currentCodes[feature];
+    this.code = this.editorLinks[feature];
   }
 }

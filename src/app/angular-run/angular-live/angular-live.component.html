@@ -3,16 +3,16 @@
     <div class="col-md-12 pd-0">
       <div class="dropdown-parent">
         <!-- <label>Angular 4 Features</label> -->
-        <ng-select class="dropdown-css" [items]="versions" bindLabel="version" bindValue="route" placeholder="Select version" [(ngModel)]="selectedVersion"
+        <!-- <ng-select class="dropdown-css" [items]="versions" bindLabel="version" bindValue="route" placeholder="Select version" [(ngModel)]="selectedVersion"
         (change)="setFeatures($event)">
         </ng-select>
 
         <ng-select class="dropdown-css" [items]="features"  placeholder="Select feature" [(ngModel)]="selectedFeature" (change)="setCodes($event)">
-        </ng-select>
+        </ng-select> -->
 
       </div>
       <!-- <div class="feature-heading">Angular Animations</div> -->
-      <div class="terminal-parent">
+      <!-- <div class="terminal-parent">
         <div class="terminal terminal-height" *ngIf="code && code.moduleCode != ''">
           <pre>{{code.moduleCode}}</pre>
         </div>
@@ -22,9 +22,9 @@
         <div class="terminal terminal-height" *ngIf="code && code.htmlCode != ''">
           <pre>{{code.htmlCode}}</pre>
         </div>
-      </div>
+      </div> -->
       <div class="editor-parent">
-        <iframe class="ng-demo" src="https://stackblitz.com/edit/angular?file=src%2Fapp%2Fapp.component.ts"
+        <iframe class="ng-demo" [src]="sanitizer.bypassSecurityTrustResourceUrl(editorURL)"
           frameborder="0" title="Angular Live"></iframe>
         <!-- <iframe class="ng-demo" src="https://ng-run.com/" title="Angular Live"></iframe> -->
       </div>

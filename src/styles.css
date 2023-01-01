@@ -386,3 +386,19 @@ svg#clouds {
   background-color: #0c243c !important;
   border-color: #0c243c !important;
 }
+
+.try-now {
+  margin: 0px 20px;
+  font-size: 14px;
+  color: #1b68b5;
+  cursor: pointer;
+  border: 1px solid #1b68b5;
+  padding: 3px 5px;
+  border-radius: 5px;
+}
+
+.try-now:hover {
+  border: #0c243c;
+  background-color: #0c243c;
+  color: white;
+}
