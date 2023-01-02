@@ -18,11 +18,13 @@
 .feature-heading {
   font-size: 15px;
   font-weight: 500;
-  margin: 0px 30px;
+  margin: 10px 30px 0px 30px;
 }
 
 .editor-parent {
-  margin: 0px 20px 0px 20px;
+  margin: 20px 10px 0px 10px;
+  text-align: center;
+  overflow-x: hidden;
 }
 
 /************ Ng-Select Dropdown CSS ****************/

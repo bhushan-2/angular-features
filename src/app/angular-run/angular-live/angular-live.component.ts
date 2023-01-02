@@ -15,12 +15,6 @@ import { DomSanitizer } from "@angular/platform-browser";
 })
 export class AngularLiveComponent {
 
-  code = {
-    moduleCode: '',
-    componentCode: '',
-    htmlCode: ''
-  }
-
   versions = [
     { 'version': 'Angular 2', 'route': 'angular2', 'features': ['Components', 'Directives'] },
     { 'version': 'Angular 4', 'route': 'angular4', 'features': ['Animations', 'ngIf with else', 'as keyword in for loop'] },
@@ -43,9 +37,13 @@ export class AngularLiveComponent {
   currentVersion: any;
   currentFeatureIndex = 0;
   editorURL = '';
+  currentFeature = '';
+  isSpinnerLoading: boolean = false;
+  currentVersionName = '';
 
-  constructor(private route: ActivatedRoute, public sanitizer:DomSanitizer) {
+  constructor(private route: ActivatedRoute, public sanitizer: DomSanitizer) {
     this.route.queryParams.subscribe(params => {
+      this.isSpinnerLoading = true
       this.currentVersion = params['version'];
       this.currentFeatureIndex = params['index'];
       this.setURL();
@@ -53,9 +51,6 @@ export class AngularLiveComponent {
   }
 
   setURL() {
-    // const obj = this.versions.find(record => record.route == data.route);
-    // this.features = obj?.features || [];
-    // this.features = [...this.features];
     switch (this.currentVersion) {
       case 'angular2': this.editorLinks = ng2codes; break;
       case 'angular4': this.editorLinks = ng4codes; break;
@@ -66,12 +61,13 @@ export class AngularLiveComponent {
 
     const version = this.versions.find(record => record.route == this.currentVersion);
     if (version) {
+      this.currentFeature = version.features[this.currentFeatureIndex];
+      this.currentVersionName = version.version;
       this.editorURL = this.editorLinks[version.features[this.currentFeatureIndex]];
+      setTimeout(() => {
+        this.isSpinnerLoading = false;
+      }, 300);
     }
 
-  }
-
-  setCodes(feature: string) {
-    this.code = this.editorLinks[feature];
   }
 }
