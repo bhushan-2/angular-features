@@ -4,6 +4,9 @@ import { ng4codes } from '../codes/angular4.code';
 import { ng5codes } from '../codes/angular5.code';
 import { ng6codes } from '../codes/angular6.code';
 import { ng7codes } from '../codes/angular7.code';
+import { ng8codes } from '../codes/angular8.code';
+import { ng9codes } from '../codes/angular9.code';
+import { ng10codes } from '../codes/angular10.code';
 import { ActivatedRoute } from '@angular/router';
 import { DomSanitizer } from "@angular/platform-browser";
 
@@ -57,6 +60,9 @@ export class AngularLiveComponent {
       case 'angular5': this.editorLinks = ng5codes; break;
       case 'angular6': this.editorLinks = ng6codes; break;
       case 'angular7': this.editorLinks = ng7codes; break;
+      case 'angular8': this.editorLinks = ng8codes; break;
+      case 'angular9': this.editorLinks = ng9codes; break;
+      case 'angular10': this.editorLinks = ng10codes; break;
     }
 
     const version = this.versions.find(record => record.route == this.currentVersion);

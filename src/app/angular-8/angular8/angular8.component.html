@@ -9,6 +9,8 @@
             <div class="col-md-12">
               <div class="feature" id="1">
                 <label>1. New lazy loading syntax</label>
+                <span class="try-now" [routerLink]="'/live'" [queryParams]="{version: 'angular8', index: 0}">Try in
+                  editor</span>
                 <p>
                   Lazy loading feature modules has been a best practice in Angular for quite a while. That hasn’t
                   changed in version 8, but in place of the proprietary syntax to enable lazy loading, the framework has
@@ -35,6 +37,8 @@
               </div>
               <div class="feature" id="3">
                 <label>3. Service Workers</label>
+                <span class="try-now" [routerLink]="'/live'" [queryParams]="{version: 'angular8', index: 2}">Try in
+                  editor</span>
                 <p>
                   Service workers function as a network proxy. They intercept all outgoing HTTP requests made by the
                   application and can choose how to respond to them. For example, they can query a local cache and
